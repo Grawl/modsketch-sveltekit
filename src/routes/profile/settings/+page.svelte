@@ -2,7 +2,7 @@
 	import { setDoc, doc } from 'firebase/firestore'
 
 	import { userStore, userSettings } from '$lib/store'
-	import type { UserStore, UserSettings } from '$lib/store'
+	import type { UserStore } from '$lib/store'
 	import { firestore } from '$lib/firebase'
 
 	import { onDestroy } from 'svelte'
@@ -22,7 +22,7 @@
 		isLoading = true
 		try {
 			const docRef = doc(firestore, 'users', user.uid)
-			await setDoc<UserSettings>(docRef, { modrinthToken })
+			await setDoc(docRef, { modrinthToken })
 		} catch (exception) {
 			console.error('Error adding document', exception)
 		}

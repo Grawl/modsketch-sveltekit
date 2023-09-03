@@ -1,6 +1,7 @@
+import { derived, writable } from 'svelte/store'
+
 import type { User } from 'firebase/auth'
 import { doc, getDoc } from 'firebase/firestore'
-import { derived, writable } from 'svelte/store'
 
 import { firestore } from '$lib/firebase'
 

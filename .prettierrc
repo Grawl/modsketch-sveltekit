@@ -21,7 +21,7 @@
   "importOrderGroupNamespaceSpecifiers": true,
   "importOrderCaseInsensitive": true,
   "importOrder": [
-    "^svelte$",
+    "^svelte",
     "<THIRD_PARTY_MODULES>",
     "^\\$lib/(.*)$",
     "^\\$modules/(.*)$",
