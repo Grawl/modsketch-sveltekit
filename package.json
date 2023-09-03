@@ -1,6 +1,12 @@
 {
 	"name": "modsketch",
 	"version": "0.1.0",
+	"repository": "https://github.com/grawl/modsketch",
+	"author": {
+		"email": "mail@grawl.ru",
+		"name": "Daniil Pronin",
+		"url": "https://grawl.ru"
+	},
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",

@@ -122,9 +122,9 @@ export const getModrinthAPI = (modrinthToken: string) => {
 		baseURL: 'https://api.modrinth.com/v2',
 		headers: {
 			Authorization: modrinthToken,
-			// TODO add repository and version from package.json
-			// https://docs.modrinth.com/api-spec#section/User-Agents
-			'X-User-Agent': 'modsketch',
+			// TODO send this 'User-Agent' header instead of default axios' or svelte'
+			// i dunno who rewrites it after me
+			'X-User-Agent': `${PACKAGE_REPOSITORY}/${PACKAGE_VERSION} (${PACKAGE_AUTHOR_EMAIL})`,
 		},
 	})
 

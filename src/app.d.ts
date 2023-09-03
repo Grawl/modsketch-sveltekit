@@ -7,6 +7,10 @@ declare global {
 		// interface PageData {}
 		// interface Platform {}
 	}
+
+	const PACKAGE_AUTHOR_EMAIL: string
+	const PACKAGE_REPOSITORY: string
+	const PACKAGE_VERSION: string
 }
 
 export {}

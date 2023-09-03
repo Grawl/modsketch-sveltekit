@@ -1,9 +1,12 @@
 <script lang="ts">
-	import { getModrinthAPI } from '$lib/modrinth'
-	import Link from '$modules/Link.svelte'
 	import { onDestroy } from 'svelte'
+	import type { Unsubscriber } from 'svelte/store'
+
 	import { createQuery } from '@tanstack/svelte-query'
+
+	import { getModrinthAPI } from '$lib/modrinth'
 	import { userSettings } from '$lib/store'
+	import Link from '$modules/Link.svelte'
 
 	$: isUserSettingsLoading = $userSettings === undefined
 
@@ -28,7 +31,7 @@
 		},
 	})
 
-	let unsubscribeModrinthAuthenticatedUser
+	let unsubscribeModrinthAuthenticatedUser: Unsubscriber
 
 	const unsubscribeSettings = userSettings.subscribe(async (settings) => {
 		if (settings === undefined) return
